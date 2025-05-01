@@ -1,13 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  FiGithub,
-  FiLinkedin,
-  FiTwitter,
-  FiMail,
-  FiHeart,
-} from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi";
 import Link from "next/link";
 
 const FooterSection = () => {

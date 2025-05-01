@@ -125,7 +125,7 @@ const CarouselComponent = ({
             className="object-cover  relative"
             priority={currentIndex === 0}
             sizes="(max-width: 768px) 100vw, 50vw"
-            onError={(e) => {
+            onError={() => {
               console.error("Image failed to load:", images[currentIndex]);
               // The fallback will remain visible if image fails to load
             }}
