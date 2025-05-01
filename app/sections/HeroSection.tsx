@@ -12,13 +12,6 @@ import {
 import Link from "next/link";
 
 const HeroSection = () => {
-  // Animation variants
-  const fadeIn = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 },
-  };
-
   // Text animation for the typing effect - made faster
   const textVariants = {
     hidden: { opacity: 0 },
@@ -205,7 +198,7 @@ const HeroSection = () => {
 
         {/* Code closing tag bottom right - kept original position, size, and opacity */}
         <motion.div
-          className="absolute -right-10 md:right-10 bottom-10 font-mono text-4xl md:text-6xl text-primary/15 dark:text-primary/5 select-none hidden md:block"
+          className="absolute -right-10 md:right-10 bottom-10 font-mono text-4xl md:text-6xl text-primary/15 dark:text-primary/15 select-none hidden md:block"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2.5 }}
@@ -282,7 +275,7 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.5 }}
           >
-            I'm a full-stack developer specializing in building exceptional
+            I&apos;m a full-stack developer specializing in building exceptional
             digital experiences. With expertise in web, mobile, and blockchain
             technologies, I craft powerful and user-friendly applications.
           </motion.p>

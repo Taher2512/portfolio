@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
+import { FiFileText } from "react-icons/fi";
 
 const AboutSection = () => {
   const [ref, inView] = useInView({
@@ -97,29 +98,30 @@ const AboutSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <div className="space-y-4">
               <p className="text-lg">
-                I'm a dedicated and innovative software developer with
+                I&apos;m a dedicated and innovative software developer with
                 experience in developing comprehensive software solutions and a
                 passion for blockchain technology.
               </p>
 
               <p>
                 I specialize in developing CRM systems, Inventory Management
-                solutions, Auction platforms, and Work Management Systems. I've
-                played a pivotal role in developing smart water meter projects,
-                showcasing skills in both web and mobile app development.
+                solutions, Auction platforms, and Work Management Systems.
+                I&apos;ve played a pivotal role in developing smart water meter
+                projects, showcasing skills in both web and mobile app
+                development.
               </p>
 
               <p>
                 As a co-founder of a digital agency, I focus on delivering
                 tailored software solutions and building strong client
-                relationships. I'm actively expanding my expertise in blockchain
-                technology through ongoing learning initiatives, having
-                successfully developed DApps and smart contracts.
+                relationships. I&apos;m actively expanding my expertise in
+                blockchain technology through ongoing learning initiatives,
+                having successfully developed DApps and smart contracts.
               </p>
 
               <p>
-                I'm currently studying Computer Science and Engineering at Amity
-                University, Kolkata, where I continue to hone my technical
+                I&apos;m currently studying Computer Science and Engineering at
+                Amity University, Kolkata, where I continue to hone my technical
                 skills and knowledge.
               </p>
 
@@ -127,8 +129,9 @@ const AboutSection = () => {
                 <Link
                   href="/my_resume.pdf"
                   target="_blank"
-                  className="bg-primary px-5 py-3 text-primary-foreground rounded-md hover:brightness-110 transition-all inline-block relative overflow-hidden group"
+                  className="bg-primary px-5 py-3 text-primary-foreground rounded-md hover:brightness-110 transition-all inline-flex items-center gap-2 relative overflow-hidden group"
                 >
+                  <FiFileText className="text-primary-foreground" />
                   <span className="relative z-10">View Resume</span>
                   <motion.span
                     className="absolute inset-0 bg-white dark:bg-black opacity-0 group-hover:opacity-20 transition-opacity"

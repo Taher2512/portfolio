@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,28 +49,34 @@ const Navbar = () => {
           <span className="text-primary">/&gt;</span>
         </Link>
 
-        {/* Desktop menu */}
-        <ul className="hidden md:flex space-x-8">
-          {navItems.map((item) => (
-            <li key={item.name}>
-              <Link
-                href={item.href}
-                className="hover:text-primary transition-colors"
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {/* Desktop menu with theme toggle */}
+        <div className="hidden md:flex items-center space-x-8">
+          <ul className="flex space-x-8">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  className="hover:text-primary transition-colors"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ThemeToggle />
+        </div>
 
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden text-2xl"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <FiX /> : <FiMenu />}
-        </button>
+        {/* Mobile view - showing theme toggle + menu button */}
+        <div className="md:hidden flex items-center space-x-4">
+          <ThemeToggle />
+          <button
+            className="text-2xl"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <FiX /> : <FiMenu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

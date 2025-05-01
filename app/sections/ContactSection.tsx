@@ -163,7 +163,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            I'm always interested in hearing about new projects and
+            I&apos;m always interested in hearing about new projects and
             opportunities. Feel free to reach out if you want to connect!
           </motion.p>
         </motion.div>
@@ -256,8 +256,8 @@ const ContactSection = () => {
                 </motion.div>
                 <h3 className="text-xl font-bold mb-2">Message Sent!</h3>
                 <p className="text-muted-foreground">
-                  Thank you for your message. I'll get back to you as soon as
-                  possible.
+                  Thank you for your message. I&apos;ll get back to you as soon
+                  as possible.
                 </p>
               </motion.div>
             ) : (

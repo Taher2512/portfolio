@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import Image from "next/image";
+// import Image from "next/image";
 
 interface CarouselComponentProps {
   images: string[];

@@ -3,13 +3,10 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {
-  FiCode,
-  FiDatabase,
   FiGlobe,
   FiLayers,
   FiSmartphone,
   FiServer,
-  FiShield,
   FiCpu,
 } from "react-icons/fi";
 import {
@@ -22,7 +19,6 @@ import {
   SiPostgresql,
   SiExpress,
   SiTailwindcss,
-  SiReactivex,
   SiSolidity,
   SiRust,
   SiEthereum,
@@ -218,8 +214,8 @@ const ExpertiseSection = () => {
 
           <p className="mb-10 max-w-3xl">
             With expertise in full-stack, mobile, and blockchain development, I
-            bring a comprehensive skill set to every project. Here's a breakdown
-            of my technical proficiencies:
+            bring a comprehensive skill set to every project. Here&apos;s a
+            breakdown of my technical proficiencies:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
