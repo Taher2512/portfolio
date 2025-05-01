@@ -26,7 +26,7 @@ const AboutSection = () => {
       transition: {
         duration: 8,
         repeat: Infinity,
-        repeatType: "reverse" as "reverse",
+        repeatType: "reverse" as const,
         ease: "easeInOut",
       },
     },

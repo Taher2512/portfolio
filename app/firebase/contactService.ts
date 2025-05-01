@@ -6,7 +6,7 @@ export interface ContactFormData {
   name: string;
   email: string;
   message: string;
-  createdAt?: any;
+  createdAt?: string;
 }
 
 /**
