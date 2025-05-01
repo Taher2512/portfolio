@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-// import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { FiFileText } from "react-icons/fi";
 
@@ -157,13 +157,12 @@ const AboutSection = () => {
                     [Your profile image would appear here]
                   </p>
                 </div>
-                {/* You can add your profile image here when available */}
-                {/* <Image 
-                  src="/your-profile-image.jpg" 
-                  alt="Taher Khasamwala" 
-                  fill 
+                <Image
+                  src="/profile-image.jpg"
+                  alt="Taher Khasamwala"
+                  fill
                   className="object-cover rounded"
-                /> */}
+                />
               </motion.div>
             </div>
           </div>

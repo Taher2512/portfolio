@@ -48,7 +48,7 @@ const ProjectsSection = () => {
       ],
       githubUrl: "#",
       liveUrl: "#",
-      imageUrls: ["image1.jpg", "image2.jpg", "image3.jpg"],
+      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg", "/bg-temp.jpg"],
     },
     {
       title: "E-commerce Platform",
@@ -57,7 +57,7 @@ const ProjectsSection = () => {
       technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
       githubUrl: "#",
       liveUrl: "#",
-      imageUrls: ["image1.jpg", "image2.jpg"],
+      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg"],
     },
   ];
 
@@ -69,7 +69,7 @@ const ProjectsSection = () => {
       technologies: ["React Native", "Redux", "Firebase", "Expo"],
       githubUrl: "#",
       storeUrl: "#",
-      imageUrls: ["image1.jpg", "image2.jpg", "image3.jpg"],
+      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg", "/bg-temp.jpg"],
     },
     {
       title: "Food Delivery App",
@@ -78,7 +78,7 @@ const ProjectsSection = () => {
       technologies: ["React Native", "Context API", "Node.js", "MongoDB"],
       githubUrl: "#",
       storeUrl: "#",
-      imageUrls: ["image1.jpg", "image2.jpg"],
+      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg"],
     },
   ];
 
@@ -90,7 +90,7 @@ const ProjectsSection = () => {
       technologies: ["Solidity", "React", "Ethers.js", "IPFS", "Hardhat"],
       githubUrl: "#",
       liveUrl: "#",
-      imageUrls: ["image1.jpg", "image2.jpg"],
+      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg"],
     },
     {
       title: "DeFi Dashboard",
@@ -99,7 +99,7 @@ const ProjectsSection = () => {
       technologies: ["React", "Web3.js", "Solidity", "The Graph", "ChainLink"],
       githubUrl: "#",
       liveUrl: "#",
-      imageUrls: ["image1.jpg", "image2.jpg", "image3.jpg"],
+      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg", "/bg-temp.jpg"],
     },
     {
       title: "Solana Staking Platform",
@@ -108,7 +108,7 @@ const ProjectsSection = () => {
       technologies: ["Rust", "React", "Anchor", "Solana Web3.js"],
       githubUrl: "#",
       liveUrl: "#",
-      imageUrls: ["image1.jpg", "image2.jpg"],
+      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg"],
     },
   ];
 

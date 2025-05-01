@@ -36,6 +36,8 @@ import {
   SiSass,
   SiAmazonwebservices,
   SiGooglecloudcomposer,
+  SiPhp,
+  SiMysql,
 } from "react-icons/si";
 
 const ExpertiseSection = () => {
@@ -89,9 +91,11 @@ const ExpertiseSection = () => {
         { name: "MongoDB", icon: <SiMongodb /> },
         { name: "PostgreSQL", icon: <SiPostgresql /> },
         { name: "Firebase", icon: <SiFirebase /> },
-        { name: "GraphQL", icon: <SiGraphql /> },
-        { name: "AWS", icon: <SiAmazonwebservices /> },
-        { name: "Azure", icon: <SiGooglecloudcomposer /> },
+        { name: "PHP", icon: <SiPhp /> },
+        { name: "MySQL", icon: <SiMysql /> },
+        // { name: "GraphQL", icon: <SiGraphql /> },
+        // { name: "AWS", icon: <SiAmazonwebservices /> },
+        // { name: "Azure", icon: <SiGooglecloudcomposer /> },
       ],
     },
     {
@@ -99,9 +103,9 @@ const ExpertiseSection = () => {
       icon: <FiSmartphone />,
       skills: [
         { name: "React Native", icon: <SiReact /> },
-        { name: "Flutter", icon: <SiFlutter /> },
-        { name: "Swift", icon: <SiSwift /> },
-        { name: "Kotlin", icon: <SiKotlin /> },
+        // { name: "Flutter", icon: <SiFlutter /> },
+        // { name: "Swift", icon: <SiSwift /> },
+        // { name: "Kotlin", icon: <SiKotlin /> },
       ],
     },
     {
@@ -119,7 +123,7 @@ const ExpertiseSection = () => {
       icon: <FiLayers />,
       skills: [
         { name: "Git", icon: <SiGit /> },
-        { name: "Docker", icon: <SiDocker /> },
+        // { name: "Docker", icon: <SiDocker /> },
       ],
     },
   ];

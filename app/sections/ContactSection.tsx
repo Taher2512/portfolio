@@ -93,7 +93,7 @@ const ContactSection = () => {
     {
       icon: <FiPhone className="h-5 w-5" />,
       title: "Phone",
-      content: "+1 (234) 567-890",
+      content: "+91 827-497-6907",
       link: "tel:+1234567890",
     },
   ];

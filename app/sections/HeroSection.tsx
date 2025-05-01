@@ -320,7 +320,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 1.9 }}
           >
             <motion.a
-              href="https://github.com"
+              href="https://github.com/Taher2512"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -4 }}
@@ -330,7 +330,7 @@ const HeroSection = () => {
               <FiGithub />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/taherk18/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -4 }}

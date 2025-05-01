@@ -37,17 +37,17 @@ const FooterSection = () => {
     {
       name: "GitHub",
       icon: <FiGithub />,
-      url: "https://github.com",
+      url: "https://github.com/Taher2512",
     },
     {
       name: "LinkedIn",
       icon: <FiLinkedin />,
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/taherk18/",
     },
     {
       name: "Twitter",
       icon: <FiTwitter />,
-      url: "https://twitter.com",
+      url: "https://x.com/taherk18",
     },
     {
       name: "Email",
@@ -328,7 +328,7 @@ const FooterSection = () => {
                   href="tel:+1234567890"
                   className="hover:text-primary transition-colors relative inline-block group"
                 >
-                  <span className="relative z-10">+1 (234) 567-890</span>
+                  <span className="relative z-10">+91 827-497-6907</span>
                   <motion.span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary scale-0 origin-left group-hover:scale-100 transition-transform duration-300 rounded-full" />
                 </a>
               </motion.li>
@@ -351,24 +351,6 @@ const FooterSection = () => {
         >
           <p className="text-muted-foreground text-sm text-center md:text-left">
             © {currentYear} Taher Khasamwala. All rights reserved.
-          </p>
-          <p className="text-muted-foreground text-sm flex items-center gap-1">
-            Built with
-            <motion.span
-              animate={{
-                scale: [1, 1.2, 1],
-                rotate: [0, 5, -5, 0],
-              }}
-              transition={{
-                duration: 1.2,
-                repeat: Infinity,
-                repeatType: "loop",
-                repeatDelay: 4,
-              }}
-            >
-              <FiHeart className="text-red-500" />
-            </motion.span>
-            using Next.js and Tailwind CSS
           </p>
         </motion.div>
       </div>
