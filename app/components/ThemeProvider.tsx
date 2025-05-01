@@ -28,7 +28,7 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 export function ThemeProvider({
   children,
   defaultTheme = "system",
-  attribute = "class",
+  //   attribute = "class",
   enableSystem = true,
   disableTransitionOnChange = false,
 }: ThemeProviderProps) {
@@ -40,10 +40,10 @@ export function ThemeProvider({
     if (storedTheme) {
       setTheme(storedTheme);
     } else if (enableSystem) {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light";
+      //   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      //     .matches
+      //     ? "dark"
+      //     : "light";
       setTheme("system");
     }
   }, [enableSystem]);

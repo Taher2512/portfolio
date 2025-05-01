@@ -2,7 +2,14 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FiMail, FiSend, FiMapPin, FiPhone } from "react-icons/fi";
+import {
+  FiMail,
+  FiSend,
+  FiMapPin,
+  FiPhone,
+  FiAlertCircle,
+} from "react-icons/fi";
+import { submitContactForm } from "../firebase/contactService";
 
 const ContactSection = () => {
   const [formState, setFormState] = useState({
@@ -13,6 +20,7 @@ const ContactSection = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -26,22 +34,27 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const result = await submitContactForm(formState);
+
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormState({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        setError("There was a problem sending your message. Please try again.");
+      }
+    } catch (err) {
+      setError("An unexpected error occurred. Please try again later.");
+      console.error("Contact form error:", err);
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormState({
-        name: "",
-        email: "",
-        message: "",
-      });
-
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
+    }
   };
 
   // Animation variants for background blobs
@@ -263,6 +276,20 @@ const ContactSection = () => {
             ) : (
               <form onSubmit={handleSubmit}>
                 <h3 className="text-xl font-bold mb-6">Send Me a Message</h3>
+
+                {/* Error message display */}
+                {error && (
+                  <motion.div
+                    className="mb-4 p-3 bg-red-500/10 border border-red-500/30 rounded-lg flex items-center text-red-500"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <FiAlertCircle className="mr-2 shrink-0" />
+                    <p className="text-sm">{error}</p>
+                  </motion.div>
+                )}
+
                 <div className="space-y-4">
                   <div>
                     <label
