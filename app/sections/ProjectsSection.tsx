@@ -78,7 +78,7 @@ const ProjectsSection = () => {
       description:
         "A comprehensive UI design system featuring modern components and utilities for building responsive web applications.",
       technologies: ["React", "TypeScript", "CSS Modules", "Storybook"],
-      githubUrl: "#",
+      githubUrl: "",
       liveUrl: "https://www.synapsisui.com",
       imageUrls: [
         "/projects/synapsisui/1.png",
@@ -103,7 +103,7 @@ const ProjectsSection = () => {
         "Tailwind CSS",
         "MongoDB",
       ],
-      githubUrl: "#",
+      githubUrl: "https://github.com/Taher2512/Promptopia",
       liveUrl: "https://promptopia-six-ruddy.vercel.app",
       imageUrls: ["/projects/promptopia/1.png", "/projects/promptopia/2.png"],
     },
@@ -112,7 +112,7 @@ const ProjectsSection = () => {
       description:
         "A document management and collaboration platform for teams to organize, share, and work with documents seamlessly.",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
-      githubUrl: "#",
+      githubUrl: "https://github.com/Taher2512/DokLink",
       liveUrl: "https://www.doklink.in",
       imageUrls: [
         "/projects/doklink/1.png",
@@ -142,8 +142,8 @@ const ProjectsSection = () => {
         "Google Maps API",
         "Stripe",
       ],
-      githubUrl: "#",
-      storeUrl: "#",
+      githubUrl: "",
+      storeUrl: "",
       imageUrls: [
         "/projects/food-delivery-app/1.jpg",
         "/projects/food-delivery-app/2.jpg",
@@ -158,8 +158,8 @@ const ProjectsSection = () => {
       description:
         "Mobile application for accessing and managing documents on the go, with offline support and push notifications.",
       technologies: ["React Native", "Redux", "Firebase", "Expo"],
-      githubUrl: "#",
-      storeUrl: "#",
+      githubUrl: "https://github.com/Taher2512/Doklink-App",
+      storeUrl: "",
       imageUrls: [
         "/projects/doklink-app/1.jpeg",
         "/projects/doklink-app/2.jpeg",
@@ -182,8 +182,8 @@ const ProjectsSection = () => {
       description:
         "A field service management application for maintenance technicians to track work orders and report on completed jobs.",
       technologies: ["React Native", "Context API", "Node.js", "MongoDB"],
-      githubUrl: "#",
-      storeUrl: "#",
+      githubUrl: "https://github.com/Taher2512/DCS-App",
+      storeUrl: "",
       imageUrls: [
         "/projects/dcs-app/1.jpg",
         "/projects/dcs-app/2.jpg",
@@ -202,8 +202,8 @@ const ProjectsSection = () => {
       description:
         "The mobile companion to SynapsisUI, providing native components for building cross-platform mobile applications.",
       technologies: ["React Native", "TypeScript", "Expo", "Jest"],
-      githubUrl: "#",
-      storeUrl: "#",
+      githubUrl: "",
+      storeUrl: "",
       imageUrls: [
         "/projects/synapsisui-app/1.png",
         "/projects/synapsisui-app/2.png",
@@ -221,8 +221,8 @@ const ProjectsSection = () => {
     //     "Firebase",
     //     "Chart.js",
     //   ],
-    //   githubUrl: "#",
-    //   storeUrl: "#",
+    //   githubUrl: "",
+    //   storeUrl: "",
     //   imageUrls: [
     //     "/projects/supersteel-app/1.png",
     //     "/projects/supersteel-app/2.png",
@@ -236,8 +236,8 @@ const ProjectsSection = () => {
       description:
         "A decentralized document verification and storage solution with blockchain-based proof of existence.",
       technologies: ["Flutter", "Dart", "Firebase", "Solidity"],
-      githubUrl: "#",
-      storeUrl: "#",
+      githubUrl: "https://github.com/Blaze5333/DeDocs",
+      storeUrl: "",
       imageUrls: [
         "/projects/dedocs-app/1.jpeg",
         "/projects/dedocs-app/2.jpeg",
@@ -252,8 +252,8 @@ const ProjectsSection = () => {
       description:
         "A healthcare information collection framework for medical professionals to gather and analyze patient data securely.",
       technologies: ["React Native", "Redux Toolkit", "Node.js", "MongoDB"],
-      githubUrl: "#",
-      storeUrl: "#",
+      githubUrl: "",
+      storeUrl: "",
       imageUrls: [
         "/projects/hicf-app/1.jpg",
         "/projects/hicf-app/2.jpg",
@@ -268,8 +268,8 @@ const ProjectsSection = () => {
       description:
         "An application for recycling centers and users to manage and track recyclable materials with reward incentives.",
       technologies: ["React Native", "Redux", "Firebase", "Maps API"],
-      githubUrl: "#",
-      storeUrl: "#",
+      githubUrl: "https://github.com/TaherMustafa-Solutions/h4b_frontend",
+      storeUrl: "",
       imageUrls: [
         "/projects/scrapify-app/1.jpeg",
         "/projects/scrapify-app/2.jpeg",
@@ -288,7 +288,7 @@ const ProjectsSection = () => {
       description:
         "A decentralized exchange specifically designed for trading carbon credits and environmental assets with real-time pricing.",
       technologies: ["React", "Web3.js", "Solidity", "The Graph", "ChainLink"],
-      githubUrl: "#",
+      githubUrl: "https://github.com/Taher2512/CarbonDEX",
       liveUrl: "https://carbon-dex.vercel.app",
       imageUrls: [
         "/projects/carbondex/1.png",
@@ -306,8 +306,8 @@ const ProjectsSection = () => {
       description:
         "A decentralized autonomous organization platform for community governance with transparent voting and proposal systems.",
       technologies: ["React", "Solidity", "The Graph", "IPFS", "Ethers.js"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/Taher2512/DigiVote",
+      liveUrl: "",
       imageUrls: [
         "/projects/digivote/1.jpeg",
         "/projects/digivote/2.jpeg",
@@ -321,8 +321,8 @@ const ProjectsSection = () => {
       description:
         "An NFT platform for issuing verifiable credentials and certificates as digital badges on blockchain.",
       technologies: ["Solidity", "React", "Ethers.js", "IPFS", "Hardhat"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/Taher2512/MeritMint.",
+      liveUrl: "",
       imageUrls: [
         "/projects/merit-mint/1.jpeg",
         "/projects/merit-mint/2.png",
