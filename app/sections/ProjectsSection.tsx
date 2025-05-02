@@ -58,82 +58,266 @@ const ProjectsSection = () => {
     },
   };
 
-  // Example project data - replace with your actual projects
+  // Project data with actual images from public/projects directory
   const webProjects = [
     {
-      title: "Portfolio Website",
+      title: "SynapsisUI",
       description:
-        "A clean, modern portfolio website built with Next.js and Tailwind CSS featuring responsive design, animations, and dark mode support.",
+        "A comprehensive UI design system featuring modern components and utilities for building responsive web applications.",
+      technologies: ["React", "TypeScript", "CSS Modules", "Storybook"],
+      githubUrl: "#",
+      liveUrl: "#",
+      imageUrls: [
+        "/projects/synapsisui/1.png",
+        "/projects/synapsisui/2.png",
+        "/projects/synapsisui/3.png",
+        "/projects/synapsisui/4.png",
+        "/projects/synapsisui/5.png",
+        "/projects/synapsisui/6.png",
+        "/projects/synapsisui/7.png",
+        "/projects/synapsisui/8.png",
+        "/projects/synapsisui/9.png",
+      ],
+    },
+    {
+      title: "Promptopia",
+      description:
+        "A platform for sharing AI prompts, allowing users to discover, create, and share creative prompts for AI tools.",
       technologies: [
         "Next.js",
         "React",
         "TypeScript",
         "Tailwind CSS",
-        "Framer Motion",
+        "MongoDB",
       ],
       githubUrl: "#",
       liveUrl: "#",
-      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg", "/bg-temp.jpg"],
+      imageUrls: ["/projects/promptopia/1.png", "/projects/promptopia/2.png"],
     },
     {
-      title: "E-commerce Platform",
+      title: "DokLink",
       description:
-        "A fully-featured e-commerce platform with product listings, shopping cart, user authentication, and payment processing.",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
+        "A document management and collaboration platform for teams to organize, share, and work with documents seamlessly.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
       githubUrl: "#",
       liveUrl: "#",
-      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg"],
+      imageUrls: [
+        "/projects/doklink/1.png",
+        "/projects/doklink/2.png",
+        "/projects/doklink/3.png",
+        "/projects/doklink/4.png",
+        "/projects/doklink/5.png",
+        "/projects/doklink/6.png",
+        "/projects/doklink/7.png",
+        "/projects/doklink/8.png",
+        "/projects/doklink/9.png",
+        "/projects/doklink/10.png",
+        "/projects/doklink/11.png",
+      ],
     },
   ];
 
   const mobileProjects = [
     {
-      title: "Fitness Tracker App",
+      title: "Food Delivery App",
       description:
-        "A cross-platform mobile app for tracking workouts, setting fitness goals, and monitoring progress over time.",
+        "A modern food delivery application with real-time order tracking, restaurant discovery, and seamless payment integration.",
+      technologies: [
+        "React Native",
+        "Redux",
+        "Firebase",
+        "Google Maps API",
+        "Stripe",
+      ],
+      githubUrl: "#",
+      storeUrl: "#",
+      imageUrls: [
+        "/projects/food-delivery-app/1.jpg",
+        "/projects/food-delivery-app/2.jpg",
+        "/projects/food-delivery-app/3.jpg",
+        "/projects/food-delivery-app/4.jpg",
+        "/projects/food-delivery-app/5.jpg",
+        "/projects/food-delivery-app/6.jpg",
+      ],
+    },
+    {
+      title: "DokLink Mobile",
+      description:
+        "Mobile application for accessing and managing documents on the go, with offline support and push notifications.",
       technologies: ["React Native", "Redux", "Firebase", "Expo"],
       githubUrl: "#",
       storeUrl: "#",
-      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg", "/bg-temp.jpg"],
+      imageUrls: [
+        "/projects/doklink-app/1.jpeg",
+        "/projects/doklink-app/2.jpeg",
+        "/projects/doklink-app/3.jpeg",
+        "/projects/doklink-app/4.jpeg",
+        "/projects/doklink-app/5.jpeg",
+        "/projects/doklink-app/6.jpeg",
+        "/projects/doklink-app/7.jpeg",
+        "/projects/doklink-app/8.jpeg",
+        "/projects/doklink-app/9.jpeg",
+        "/projects/doklink-app/10.jpeg",
+        "/projects/doklink-app/11.jpeg",
+        "/projects/doklink-app/12.jpeg",
+        "/projects/doklink-app/13.jpeg",
+        "/projects/doklink-app/14.jpeg",
+      ],
     },
     {
-      title: "Food Delivery App",
+      title: "DCS App",
       description:
-        "A mobile app that allows users to browse restaurants, order food, and track delivery in real-time.",
+        "A field service management application for maintenance technicians to track work orders and report on completed jobs.",
       technologies: ["React Native", "Context API", "Node.js", "MongoDB"],
       githubUrl: "#",
       storeUrl: "#",
-      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg"],
+      imageUrls: [
+        "/projects/dcs-app/1.jpg",
+        "/projects/dcs-app/2.jpg",
+        "/projects/dcs-app/3.jpg",
+        "/projects/dcs-app/4.jpg",
+        "/projects/dcs-app/5.jpg",
+        "/projects/dcs-app/6.jpg",
+        "/projects/dcs-app/7.jpg",
+        "/projects/dcs-app/8.jpg",
+        "/projects/dcs-app/9.jpg",
+        "/projects/dcs-app/10.jpg",
+      ],
+    },
+    {
+      title: "SynapsisUI Mobile",
+      description:
+        "The mobile companion to SynapsisUI, providing native components for building cross-platform mobile applications.",
+      technologies: ["React Native", "TypeScript", "Expo", "Jest"],
+      githubUrl: "#",
+      storeUrl: "#",
+      imageUrls: [
+        "/projects/synapsisui-app/1.png",
+        "/projects/synapsisui-app/2.png",
+        "/projects/synapsisui-app/3.png",
+      ],
+    },
+    // {
+    //   title: "SuperSteel",
+    //   description:
+    //     "A manufacturing management system for steel production companies, tracking inventory, production, and sales.",
+    //   technologies: [
+    //     "React Native",
+    //     "Redux",
+    //     "Node.js",
+    //     "Firebase",
+    //     "Chart.js",
+    //   ],
+    //   githubUrl: "#",
+    //   storeUrl: "#",
+    //   imageUrls: [
+    //     "/projects/supersteel-app/1.png",
+    //     "/projects/supersteel-app/2.png",
+    //     "/projects/supersteel-app/3.png",
+    //     "/projects/supersteel-app/4.png",
+    //     "/projects/supersteel-app/5.png",
+    //   ],
+    // },
+    {
+      title: "DeDocs",
+      description:
+        "A decentralized document verification and storage solution with blockchain-based proof of existence.",
+      technologies: ["Flutter", "Dart", "Firebase", "Solidity"],
+      githubUrl: "#",
+      storeUrl: "#",
+      imageUrls: [
+        "/projects/dedocs-app/1.jpeg",
+        "/projects/dedocs-app/2.jpeg",
+        "/projects/dedocs-app/3.jpeg",
+        "/projects/dedocs-app/4.jpeg",
+        "/projects/dedocs-app/5.jpeg",
+        "/projects/dedocs-app/6.jpeg",
+      ],
+    },
+    {
+      title: "HICF App",
+      description:
+        "A healthcare information collection framework for medical professionals to gather and analyze patient data securely.",
+      technologies: ["React Native", "Redux Toolkit", "Node.js", "MongoDB"],
+      githubUrl: "#",
+      storeUrl: "#",
+      imageUrls: [
+        "/projects/hicf-app/1.jpg",
+        "/projects/hicf-app/2.jpg",
+        "/projects/hicf-app/3.jpg",
+        "/projects/hicf-app/4.jpg",
+        "/projects/hicf-app/5.jpg",
+        "/projects/hicf-app/6.jpg",
+      ],
+    },
+    {
+      title: "Scrapify",
+      description:
+        "An application for recycling centers and users to manage and track recyclable materials with reward incentives.",
+      technologies: ["React Native", "Redux", "Firebase", "Maps API"],
+      githubUrl: "#",
+      storeUrl: "#",
+      imageUrls: [
+        "/projects/scrapify-app/1.jpeg",
+        "/projects/scrapify-app/2.jpeg",
+        "/projects/scrapify-app/3.jpeg",
+        "/projects/scrapify-app/4.jpeg",
+        "/projects/scrapify-app/5.jpeg",
+        "/projects/scrapify-app/6.jpeg",
+        "/projects/scrapify-app/7.jpeg",
+      ],
     },
   ];
 
   const web3Projects = [
     {
-      title: "NFT Marketplace",
+      title: "CarbonDEX Exchange",
       description:
-        "A decentralized marketplace for minting, buying, and selling NFTs using Ethereum smart contracts.",
-      technologies: ["Solidity", "React", "Ethers.js", "IPFS", "Hardhat"],
-      githubUrl: "#",
-      liveUrl: "#",
-      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg"],
-    },
-    {
-      title: "DeFi Dashboard",
-      description:
-        "A dashboard for monitoring DeFi investments across multiple protocols with real-time data visualization.",
+        "A decentralized exchange specifically designed for trading carbon credits and environmental assets with real-time pricing.",
       technologies: ["React", "Web3.js", "Solidity", "The Graph", "ChainLink"],
       githubUrl: "#",
       liveUrl: "#",
-      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg", "/bg-temp.jpg"],
+      imageUrls: [
+        "/projects/carbondex/1.png",
+        "/projects/carbondex/2.png",
+        "/projects/carbondex/3.png",
+        "/projects/carbondex/4.png",
+        "/projects/carbondex/5.png",
+        "/projects/carbondex/6.png",
+        "/projects/carbondex/7.png",
+        "/projects/carbondex/8.png",
+      ],
     },
     {
-      title: "Solana Staking Platform",
+      title: "DigiVote DAO",
       description:
-        "A platform for staking SOL tokens and earning rewards with a user-friendly interface.",
-      technologies: ["Rust", "React", "Anchor", "Solana Web3.js"],
+        "A decentralized autonomous organization platform for community governance with transparent voting and proposal systems.",
+      technologies: ["React", "Solidity", "The Graph", "IPFS", "Ethers.js"],
       githubUrl: "#",
       liveUrl: "#",
-      imageUrls: ["/bg-temp.jpg", "/bg-temp.jpg"],
+      imageUrls: [
+        "/projects/digivote/1.jpeg",
+        "/projects/digivote/2.jpeg",
+        "/projects/digivote/3.jpeg",
+        "/projects/digivote/4.jpeg",
+        "/projects/digivote/5.jpeg",
+      ],
+    },
+    {
+      title: "Merit Mint",
+      description:
+        "An NFT platform for issuing verifiable credentials and certificates as digital badges on blockchain.",
+      technologies: ["Solidity", "React", "Ethers.js", "IPFS", "Hardhat"],
+      githubUrl: "#",
+      liveUrl: "#",
+      imageUrls: [
+        "/projects/merit-mint/1.jpeg",
+        "/projects/merit-mint/2.png",
+        "/projects/merit-mint/3.jpeg",
+        "/projects/merit-mint/4.jpeg",
+        "/projects/merit-mint/5.png",
+        "/projects/merit-mint/6.jpeg",
+      ],
     },
   ];
 

@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, PanInfo, useAnimation } from "framer-motion";
-import { FiChevronLeft, FiChevronRight, FiPause, FiPlay } from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Image from "next/image";
 
 interface CarouselComponentProps {
@@ -15,25 +15,8 @@ const CarouselComponent = ({
   isMobile = false,
 }: CarouselComponentProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const controls = useAnimation();
   const constraintsRef = useRef(null);
-  const autoplayInterval = 4000; // 4 seconds between slides
-
-  // Auto-scroll functionality
-  useEffect(() => {
-    let intervalId: NodeJS.Timeout;
-
-    if (!isPaused && images.length > 1) {
-      intervalId = setInterval(() => {
-        goToNext();
-      }, autoplayInterval);
-    }
-
-    return () => {
-      if (intervalId) clearInterval(intervalId);
-    };
-  }, [currentIndex, isPaused, images.length]);
 
   // Reset auto-scroll when user interacts with carousel
   const resetAutoScroll = () => {
@@ -71,10 +54,6 @@ const CarouselComponent = ({
       // If swipe wasn't strong enough, reset position
       controls.start({ x: 0 });
     }
-  };
-
-  const togglePause = () => {
-    setIsPaused(!isPaused);
   };
 
   if (images.length === 0) {
@@ -122,7 +101,7 @@ const CarouselComponent = ({
             src={images[currentIndex]}
             alt={`Slide ${currentIndex + 1}`}
             fill
-            className="object-cover  relative"
+            className="object-center relative"
             priority={currentIndex === 0}
             sizes="(max-width: 768px) 100vw, 50vw"
             onError={() => {
@@ -156,17 +135,6 @@ const CarouselComponent = ({
       >
         <FiChevronRight size={18} />
       </button>
-
-      {/* Play/Pause button */}
-      {images.length > 1 && (
-        <button
-          className="absolute top-2 right-2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-          onClick={togglePause}
-          aria-label={isPaused ? "Play slideshow" : "Pause slideshow"}
-        >
-          {isPaused ? <FiPlay size={16} /> : <FiPause size={16} />}
-        </button>
-      )}
 
       {/* Slide indicator dots */}
       <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2">
