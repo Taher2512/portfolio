@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { motion, PanInfo, useAnimation } from "framer-motion";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Image from "next/image";
