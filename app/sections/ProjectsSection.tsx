@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ProjectCard from "../components/ProjectCard";
 import MobileProjectCard from "../components/MobileProjectCard";
-import Link from "next/link";
+// import Link from "next/link";
 
 const ProjectsSection = () => {
   const [activeTab, setActiveTab] = useState("all");

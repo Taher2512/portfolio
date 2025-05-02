@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {
@@ -13,10 +13,10 @@ import {
 import { submitContactForm } from "../firebase/contactService";
 
 const ContactSection = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  // const [ref, inView] = useInView({
+  //   triggerOnce: true,
+  //   threshold: 0.1,
+  // });
 
   const [isMobile, setIsMobile] = useState(false);
 
