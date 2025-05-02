@@ -110,7 +110,7 @@ const ProjectsSection = () => {
     {
       title: "DokLink",
       description:
-        "A document management and collaboration platform for teams to organize, share, and work with documents seamlessly.",
+        "A platform for hospital bed booking and making doctor appointments for emergency situations, helping patients access healthcare services efficiently.",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
       githubUrl: "https://github.com/Taher2512/DokLink",
       liveUrl: "https://www.doklink.in",
@@ -156,7 +156,7 @@ const ProjectsSection = () => {
     {
       title: "DokLink Mobile",
       description:
-        "Mobile application for accessing and managing documents on the go, with offline support and push notifications.",
+        "Mobile application for hospital bed booking and making doctor appointments for emergency situations, allowing patients to access healthcare services on the go.",
       technologies: ["React Native", "Redux", "Firebase", "Expo"],
       githubUrl: "https://github.com/Taher2512/Doklink-App",
       storeUrl: "",
@@ -250,7 +250,7 @@ const ProjectsSection = () => {
     {
       title: "HICF App",
       description:
-        "A healthcare information collection framework for medical professionals to gather and analyze patient data securely.",
+        "An inventory management system app where users can manage their stock, track orders, and update inventory accordingly in real-time.",
       technologies: ["React Native", "Redux Toolkit", "Node.js", "MongoDB"],
       githubUrl: "",
       storeUrl: "",
@@ -319,7 +319,7 @@ const ProjectsSection = () => {
     {
       title: "Merit Mint",
       description:
-        "An NFT platform for issuing verifiable credentials and certificates as digital badges on blockchain.",
+        "A platform that rewards NFTs and tokens for people who perform well in academics and education in their institutions, incentivizing educational excellence.",
       technologies: ["Solidity", "React", "Ethers.js", "IPFS", "Hardhat"],
       githubUrl: "https://github.com/Taher2512/MeritMint.",
       liveUrl: "",
