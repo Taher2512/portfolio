@@ -79,7 +79,7 @@ const ProjectsSection = () => {
         "A comprehensive UI design system featuring modern components and utilities for building responsive web applications.",
       technologies: ["React", "TypeScript", "CSS Modules", "Storybook"],
       githubUrl: "#",
-      liveUrl: "#",
+      liveUrl: "https://www.synapsisui.com",
       imageUrls: [
         "/projects/synapsisui/1.png",
         "/projects/synapsisui/2.png",
@@ -104,7 +104,7 @@ const ProjectsSection = () => {
         "MongoDB",
       ],
       githubUrl: "#",
-      liveUrl: "#",
+      liveUrl: "https://promptopia-six-ruddy.vercel.app",
       imageUrls: ["/projects/promptopia/1.png", "/projects/promptopia/2.png"],
     },
     {
@@ -113,7 +113,7 @@ const ProjectsSection = () => {
         "A document management and collaboration platform for teams to organize, share, and work with documents seamlessly.",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
       githubUrl: "#",
-      liveUrl: "#",
+      liveUrl: "https://www.doklink.in",
       imageUrls: [
         "/projects/doklink/1.png",
         "/projects/doklink/2.png",
@@ -289,7 +289,7 @@ const ProjectsSection = () => {
         "A decentralized exchange specifically designed for trading carbon credits and environmental assets with real-time pricing.",
       technologies: ["React", "Web3.js", "Solidity", "The Graph", "ChainLink"],
       githubUrl: "#",
-      liveUrl: "#",
+      liveUrl: "https://carbon-dex.vercel.app",
       imageUrls: [
         "/projects/carbondex/1.png",
         "/projects/carbondex/2.png",
