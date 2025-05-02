@@ -194,19 +194,6 @@ const ExpertiseSection = () => {
       {/* Subtle gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-500/[0.02] to-indigo-500/[0.03] dark:from-transparent dark:via-blue-500/[0.03] dark:to-indigo-500/[0.04] -z-20"></div>
 
-      {/* Subtle grid pattern */}
-      <motion.div
-        className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMzMjMyMzIiIGZpbGwtb3BhY2l0eT0iMC4wMjUiIGQ9Ik0zNiAzNGg0djFoLTR2LTF6bTAtMmgxdjRoLTF2LTR6bTItMWgxdjFoLTF2LTF6bS0yIDBoMXYxaC0xdi0xeiIvPjwvZz48L3N2Zz4=')] opacity-40 dark:opacity-50 -z-20"
-        initial={{ opacity: 0.3 }}
-        animate={{ opacity: 0.4 }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-      ></motion.div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           ref={ref}

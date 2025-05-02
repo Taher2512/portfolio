@@ -73,19 +73,6 @@ const AboutSection = () => {
       {/* Subtle gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-indigo-500/[0.03] to-purple-500/[0.03] dark:from-transparent dark:via-indigo-500/[0.04] dark:to-purple-500/[0.04] -z-20"></div>
 
-      {/* Subtle grid pattern */}
-      <motion.div
-        className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMzMjMyMzIiIGZpbGwtb3BhY2l0eT0iMC4wMyIgZD0iTTM2IDM0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMi0xaDF2MWgtMXYtMXptLTIgMGgxdjFoLTF2LTF6Ii8+PC9nPjwvc3ZnPg==')] opacity-40 dark:opacity-50 -z-20"
-        initial={{ opacity: 0.3 }}
-        animate={{ opacity: 0.4 }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-      ></motion.div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           ref={ref}
@@ -152,11 +139,6 @@ const AboutSection = () => {
                 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                  <p className="text-center font-mono text-sm">
-                    [Your profile image would appear here]
-                  </p>
-                </div>
                 <Image
                   src="/profile-image.jpg"
                   alt="Taher Khasamwala"

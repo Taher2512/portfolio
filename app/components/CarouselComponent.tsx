@@ -133,11 +133,11 @@ const CarouselComponent = ({
         </div>
 
         {/* Swipe hint indicator - only visible on mobile */}
-        <div className="absolute bottom-16 left-0 right-0 flex justify-center items-center pointer-events-none md:hidden z-20">
+        {/* <div className="absolute bottom-16 left-0 right-0 flex justify-center items-center pointer-events-none md:hidden z-20">
           <div className="text-white/70 text-xs bg-black/30 px-3 py-1 rounded-full">
             Swipe to view more
           </div>
-        </div>
+        </div> */}
       </motion.div>
 
       {/* Navigation arrows - hidden on mobile but visible on desktop hover */}

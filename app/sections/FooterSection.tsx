@@ -147,22 +147,6 @@ const FooterSection = () => {
       {/* Enhanced gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.03] via-purple-500/[0.04] to-teal-500/[0.03] dark:from-blue-500/[0.02] dark:via-purple-500/[0.03] dark:to-teal-500/[0.02] -z-20"></div>
 
-      {/* New subtle noise texture */}
-      <motion.div
-        className="absolute inset-0 opacity-20 dark:opacity-30 -z-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')]"
-        initial={{ opacity: 0.1 }}
-        animate={{ opacity: 0.2 }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-      ></motion.div>
-
-      {/* New subtle grid overlay */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMzMjMyMzIiIGZpbGwtb3BhY2l0eT0iMC4wMSIgZD0iTTM2IDM0aDR2MWgtNHYtMXptMC0yaDJ2NGgtMnYtNHptMi0xaDJ2MWgtMnYtMXptLTIgMGgydjFoLTJ2LTF6Ii8+PC9nPjwvc3ZnPg==')] opacity-30 dark:opacity-40 -z-20"></div>
-
       {/* New environment */}
       <motion.div
         className="absolute -top-20 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-card opacity-50 blur-2xl -z-10"

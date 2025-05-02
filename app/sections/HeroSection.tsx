@@ -210,22 +210,6 @@ const HeroSection = () => {
       {/* Subtle gradient background - increased opacity */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-500/[0.05] to-blue-500/[0.05] dark:from-transparent dark:via-purple-500/[0.06] dark:to-blue-500/[0.06] -z-20"></div>
 
-      {/* Enhanced grid pattern with animation and higher opacity */}
-      <motion.div
-        className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMzMjMyMzIiIGZpbGwtb3BhY2l0eT0iMC4wNSIgZD0iTTM2IDM0aDR2MWgtNHYtMXptMC0yaDF2NGgtMXYtNHptMi0xaDF2MWgtMXYtMXptLTIgMGgxdjFoLTF2LTF6Ii8+PC9nPjwvc3ZnPg==')] opacity-50 dark:opacity-60 -z-20"
-        initial={{ scale: 1.05, opacity: 0.4 }}
-        animate={{
-          scale: [1.05, 1, 1.05],
-          opacity: [0.4, 0.6, 0.4],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-      ></motion.div>
-
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
