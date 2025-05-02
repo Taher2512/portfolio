@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import Link from "next/link";
 import { FiFileText } from "react-icons/fi";
+import { useState, useEffect } from "react";
 
 const AboutSection = () => {
   const [ref, inView] = useInView({
@@ -12,23 +13,47 @@ const AboutSection = () => {
     threshold: 0.1,
   });
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile on component mount and window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobile);
+
+    // Clean up
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   // Background blob animation variants
   const blobVariants = {
     initial: {
       scale: 0.8,
-      opacity: 0.2,
-      borderRadius: "70% 30% 50% 50% / 50% 50% 40% 60%",
+      opacity: 0.5,
+      borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
     },
     animate: {
       scale: 1,
-      opacity: 0.15,
-      borderRadius: "40% 60% 60% 40% / 60% 40% 50% 50%",
+      opacity: 0.4,
+      borderRadius: "30% 60% 70% 40% / 50% 60% 30% 60%",
       transition: {
         duration: 8,
-        repeat: Infinity,
+        repeat: isMobile ? 0 : Infinity,
         repeatType: "reverse" as const,
         ease: "easeInOut",
       },
+    },
+    // Static state for mobile
+    static: {
+      scale: 0.9,
+      opacity: 0.4,
+      borderRadius: "45% 55% 50% 50% / 55% 45% 50% 50%",
     },
   };
 
@@ -42,7 +67,7 @@ const AboutSection = () => {
         className="absolute -right-64 top-1/4 w-[500px] h-[500px] bg-purple-500/20 dark:bg-purple-500/10 blur-[80px] rounded-full -z-10"
         variants={blobVariants}
         initial="initial"
-        animate="animate"
+        animate={isMobile ? "static" : "animate"}
       />
 
       <motion.div
@@ -59,15 +84,20 @@ const AboutSection = () => {
             borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
             transition: {
               duration: 6,
-              repeat: Infinity,
+              repeat: isMobile ? 0 : Infinity,
               repeatType: "reverse",
               ease: "easeInOut",
               delay: 2,
             },
           },
+          static: {
+            scale: 0.9,
+            opacity: 0.1,
+            borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
+          },
         }}
         initial="initial"
-        animate="animate"
+        animate={isMobile ? "static" : "animate"}
       />
 
       {/* Subtle gradient background */}

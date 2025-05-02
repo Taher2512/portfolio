@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ProjectCard from "../components/ProjectCard";
 import MobileProjectCard from "../components/MobileProjectCard";
+import Link from "next/link";
 
 const ProjectsSection = () => {
   const [activeTab, setActiveTab] = useState("all");
@@ -13,23 +14,47 @@ const ProjectsSection = () => {
     threshold: 0.1,
   });
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile on component mount and window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobile);
+
+    // Clean up
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   // Background blob animation variants
   const blobVariants = {
     initial: {
       scale: 0.8,
-      opacity: 0.2,
-      borderRadius: "60% 40% 70% 30% / 50% 60% 40% 50%",
+      opacity: 0.4,
+      borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
     },
     animate: {
       scale: 1,
-      opacity: 0.15,
-      borderRadius: "40% 60% 30% 70% / 60% 40% 50% 50%",
+      opacity: 0.35,
+      borderRadius: "30% 60% 70% 40% / 50% 60% 30% 60%",
       transition: {
-        duration: 12,
-        repeat: Infinity,
+        duration: 8,
+        repeat: isMobile ? 0 : Infinity,
         repeatType: "reverse" as const,
         ease: "easeInOut",
       },
+    },
+    // Static state for mobile
+    static: {
+      scale: 0.9,
+      opacity: 0.35,
+      borderRadius: "45% 55% 50% 50% / 55% 45% 50% 50%",
     },
   };
 
@@ -148,7 +173,7 @@ const ProjectsSection = () => {
         className="absolute -right-64 top-96 w-[600px] h-[600px] bg-rose-500/10 dark:bg-rose-500/5 blur-[90px] rounded-full -z-10"
         variants={blobVariants}
         initial="initial"
-        animate="animate"
+        animate={isMobile ? "static" : "animate"}
       />
 
       <motion.div
@@ -165,15 +190,20 @@ const ProjectsSection = () => {
             borderRadius: "40% 60% 70% 30% / 60% 40% 30% 70%",
             transition: {
               duration: 10,
-              repeat: Infinity,
+              repeat: isMobile ? 0 : Infinity,
               repeatType: "reverse",
               ease: "easeInOut",
               delay: 2,
             },
           },
+          static: {
+            scale: 0.9,
+            opacity: 0.1,
+            borderRadius: "50% 50% 50% 50% / 50% 50% 50% 50%",
+          },
         }}
         initial="initial"
-        animate="animate"
+        animate={isMobile ? "static" : "animate"}
       />
 
       <motion.div
@@ -190,15 +220,20 @@ const ProjectsSection = () => {
             borderRadius: "40% 60% 50% 50% / 40% 60% 40% 60%",
             transition: {
               duration: 8,
-              repeat: Infinity,
+              repeat: isMobile ? 0 : Infinity,
               repeatType: "reverse",
               ease: "easeInOut",
               delay: 1,
             },
           },
+          static: {
+            scale: 0.8,
+            opacity: 0.08,
+            borderRadius: "50% 50% 50% 50% / 50% 50% 50% 50%",
+          },
         }}
         initial="initial"
-        animate="animate"
+        animate={isMobile ? "static" : "animate"}
       />
 
       {/* Subtle gradient background */}

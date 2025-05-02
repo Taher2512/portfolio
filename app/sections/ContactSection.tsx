@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import {
   FiMail,
   FiSend,
@@ -12,6 +13,29 @@ import {
 import { submitContactForm } from "../firebase/contactService";
 
 const ContactSection = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile on component mount and window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobile);
+
+    // Clean up
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -61,19 +85,25 @@ const ContactSection = () => {
   const blobVariants = {
     initial: {
       scale: 0.8,
-      opacity: 0.12,
-      borderRadius: "40% 60% 70% 30% / 40% 50% 60% 50%",
+      opacity: 0.45,
+      borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
     },
     animate: {
       scale: 1,
-      opacity: 0.15,
-      borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+      opacity: 0.35,
+      borderRadius: "30% 60% 70% 40% / 50% 60% 30% 60%",
       transition: {
-        duration: 12,
-        repeat: Infinity,
+        duration: 8,
+        repeat: isMobile ? 0 : Infinity,
         repeatType: "reverse" as const,
         ease: "easeInOut",
       },
+    },
+    // Static state for mobile
+    static: {
+      scale: 0.9,
+      opacity: 0.35,
+      borderRadius: "45% 55% 50% 50% / 55% 45% 50% 50%",
     },
   };
 
@@ -108,7 +138,7 @@ const ContactSection = () => {
         className="absolute left-0 top-20 w-[400px] h-[400px] bg-blue-500/10 dark:bg-blue-500/5 blur-[80px] rounded-full -z-10"
         variants={blobVariants}
         initial="initial"
-        animate="animate"
+        animate={isMobile ? "static" : "animate"}
       />
 
       <motion.div
@@ -125,15 +155,20 @@ const ContactSection = () => {
             borderRadius: "40% 60% 30% 70% / 60% 40% 70% 30%",
             transition: {
               duration: 10,
-              repeat: Infinity,
+              repeat: isMobile ? 0 : Infinity,
               repeatType: "reverse",
               ease: "easeInOut",
               delay: 2,
             },
           },
+          static: {
+            scale: 0.9,
+            opacity: 0.12,
+            borderRadius: "45% 55% 50% 50% / 55% 45% 50% 50%",
+          },
         }}
         initial="initial"
-        animate="animate"
+        animate={isMobile ? "static" : "animate"}
       />
 
       {/* Subtle gradient overlay */}

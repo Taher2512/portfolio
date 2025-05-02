@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {
@@ -24,18 +25,11 @@ import {
   SiEthereum,
   SiSolana,
   SiFirebase,
-  // SiDocker,
   SiGit,
-  // SiGraphql,
   SiRedux,
-  // SiFlutter,
-  // SiSwift,
-  // SiKotlin,
   SiHtml5,
   SiCss3,
   SiSass,
-  // SiAmazonwebservices,
-  // SiGooglecloudcomposer,
   SiPhp,
   SiMysql,
 } from "react-icons/si";
@@ -45,6 +39,24 @@ const ExpertiseSection = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile on component mount and window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobile);
+
+    // Clean up
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Background blob animation variants
   const blobVariants = {
@@ -59,10 +71,16 @@ const ExpertiseSection = () => {
       borderRadius: "40% 60% 40% 60% / 40% 40% 60% 60%",
       transition: {
         duration: 10,
-        repeat: Infinity,
+        repeat: isMobile ? 0 : Infinity,
         repeatType: "reverse" as const,
         ease: "easeInOut",
       },
+    },
+    // Static state for mobile
+    static: {
+      scale: 0.9,
+      opacity: 0.2,
+      borderRadius: "45% 55% 50% 50% / 55% 45% 50% 50%",
     },
   };
 
@@ -93,20 +111,12 @@ const ExpertiseSection = () => {
         { name: "Firebase", icon: <SiFirebase /> },
         { name: "PHP", icon: <SiPhp /> },
         { name: "MySQL", icon: <SiMysql /> },
-        // { name: "GraphQL", icon: <SiGraphql /> },
-        // { name: "AWS", icon: <SiAmazonwebservices /> },
-        // { name: "Azure", icon: <SiGooglecloudcomposer /> },
       ],
     },
     {
       title: "Mobile Development",
       icon: <FiSmartphone />,
-      skills: [
-        { name: "React Native", icon: <SiReact /> },
-        // { name: "Flutter", icon: <SiFlutter /> },
-        // { name: "Swift", icon: <SiSwift /> },
-        // { name: "Kotlin", icon: <SiKotlin /> },
-      ],
+      skills: [{ name: "React Native", icon: <SiReact /> }],
     },
     {
       title: "Blockchain Development",
@@ -121,10 +131,7 @@ const ExpertiseSection = () => {
     {
       title: "DevOps & Tools",
       icon: <FiLayers />,
-      skills: [
-        { name: "Git", icon: <SiGit /> },
-        // { name: "Docker", icon: <SiDocker /> },
-      ],
+      skills: [{ name: "Git", icon: <SiGit /> }],
     },
   ];
 
@@ -138,7 +145,7 @@ const ExpertiseSection = () => {
         className="absolute -right-96 top-20 w-[700px] h-[700px] bg-blue-500/10 dark:bg-blue-500/5 blur-[100px] rounded-full -z-10"
         variants={blobVariants}
         initial="initial"
-        animate="animate"
+        animate={isMobile ? "static" : "animate"}
       />
 
       <motion.div
@@ -155,15 +162,20 @@ const ExpertiseSection = () => {
             borderRadius: "40% 60% 30% 70% / 40% 40% 60% 60%",
             transition: {
               duration: 8,
-              repeat: Infinity,
+              repeat: isMobile ? 0 : Infinity,
               repeatType: "reverse",
               ease: "easeInOut",
               delay: 1,
             },
           },
+          static: {
+            scale: 0.9,
+            opacity: 0.2,
+            borderRadius: "45% 55% 50% 50% / 55% 45% 50% 50%",
+          },
         }}
         initial="initial"
-        animate="animate"
+        animate={isMobile ? "static" : "animate"}
       />
 
       <motion.div
@@ -180,15 +192,20 @@ const ExpertiseSection = () => {
             borderRadius: "30% 70% 60% 40% / 40% 60% 40% 60%",
             transition: {
               duration: 6,
-              repeat: Infinity,
+              repeat: isMobile ? 0 : Infinity,
               repeatType: "reverse",
               ease: "easeInOut",
               delay: 3,
             },
           },
+          static: {
+            scale: 0.9,
+            opacity: 0.2,
+            borderRadius: "45% 55% 50% 50% / 55% 45% 50% 50%",
+          },
         }}
         initial="initial"
-        animate="animate"
+        animate={isMobile ? "static" : "animate"}
       />
 
       {/* Subtle gradient background */}

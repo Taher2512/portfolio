@@ -10,8 +10,27 @@ import {
   FiDatabase,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const HeroSection = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile on component mount and window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobile);
+
+    // Clean up
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   // Text animation for the typing effect - made faster
   const textVariants = {
     hidden: { opacity: 0 },
@@ -51,10 +70,16 @@ const HeroSection = () => {
       borderRadius: "30% 60% 70% 40% / 50% 60% 30% 60%",
       transition: {
         duration: 8,
-        repeat: Infinity,
+        repeat: isMobile ? 0 : Infinity,
         repeatType: "reverse" as const,
         ease: "easeInOut",
       },
+    },
+    // Static state for mobile
+    static: {
+      scale: 0.9,
+      opacity: 0.3,
+      borderRadius: "45% 55% 50% 50% / 55% 45% 50% 50%",
     },
   };
 
@@ -68,7 +93,7 @@ const HeroSection = () => {
         className="absolute -right-64 md:-right-96 top-1/3 w-[500px] h-[500px] md:w-[800px] md:h-[800px] bg-primary/40 dark:bg-primary/20 blur-[80px] rounded-full -z-10"
         variants={blobVariants}
         initial="initial"
-        animate="animate"
+        animate={isMobile ? "static" : "animate"}
       />
 
       <motion.div
@@ -85,15 +110,20 @@ const HeroSection = () => {
             borderRadius: "50% 40% 30% 70% / 60% 40% 60% 30%",
             transition: {
               duration: 3,
-              repeat: Infinity,
+              repeat: isMobile ? 0 : Infinity,
               repeatType: "reverse",
               ease: "easeInOut",
               delay: 1,
             },
           },
+          static: {
+            scale: 0.8,
+            opacity: 0.25,
+            borderRadius: "45% 55% 50% 50% / 55% 45% 50% 50%",
+          },
         }}
         initial="initial"
-        animate="animate"
+        animate={isMobile ? "static" : "animate"}
       />
 
       <motion.div
@@ -110,15 +140,20 @@ const HeroSection = () => {
             borderRadius: "50% 50% 30% 70% / 30% 70% 50% 50%",
             transition: {
               duration: 3,
-              repeat: Infinity,
+              repeat: isMobile ? 0 : Infinity,
               repeatType: "reverse",
               ease: "easeInOut",
               delay: 2,
             },
           },
+          static: {
+            scale: 0.7,
+            opacity: 0.2,
+            borderRadius: "45% 55% 50% 50% / 55% 45% 50% 50%",
+          },
         }}
         initial="initial"
-        animate="animate"
+        animate={isMobile ? "static" : "animate"}
       />
 
       {/* Background tech icons - increased opacity for better visibility */}
