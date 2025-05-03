@@ -34,8 +34,6 @@ import {
   SiMysql,
   SiFramer,
   SiExpo,
-  SiCoinbase,
-  SiWebflow,
 } from "react-icons/si";
 
 const ExpertiseSection = () => {
