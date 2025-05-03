@@ -77,7 +77,14 @@ const ProjectsSection = () => {
       title: "SynapsisUI",
       description:
         "A comprehensive UI design system featuring modern components and utilities for building responsive web applications.",
-      technologies: ["React", "TypeScript", "CSS Modules", "Storybook"],
+      technologies: [
+        "Next.js",
+        "JavaScript",
+        "Framer Motion",
+        "Node.js",
+        "Express",
+        "Tailwind CSS",
+      ],
       githubUrl: "",
       liveUrl: "https://www.synapsisui.com",
       imageUrls: [
@@ -98,10 +105,11 @@ const ProjectsSection = () => {
         "A platform for sharing AI prompts, allowing users to discover, create, and share creative prompts for AI tools.",
       technologies: [
         "Next.js",
-        "React",
-        "TypeScript",
+        "JavaScript",
         "Tailwind CSS",
+        "CSS",
         "MongoDB",
+        "NextAuth",
       ],
       githubUrl: "https://github.com/Taher2512/Promptopia",
       liveUrl: "https://promptopia-six-ruddy.vercel.app",
@@ -111,7 +119,7 @@ const ProjectsSection = () => {
       title: "DokLink",
       description:
         "A platform for hospital bed booking and making doctor appointments for emergency situations, helping patients access healthcare services efficiently.",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
+      technologies: ["Next.js", "JavaScript", "Tailwind CSS"],
       githubUrl: "https://github.com/Taher2512/DokLink",
       liveUrl: "https://www.doklink.in",
       imageUrls: [
@@ -140,7 +148,7 @@ const ProjectsSection = () => {
         "Redux",
         "Firebase",
         "Google Maps API",
-        "Stripe",
+        "NativeWind",
       ],
       githubUrl: "",
       storeUrl: "",
@@ -157,7 +165,7 @@ const ProjectsSection = () => {
       title: "DokLink Mobile",
       description:
         "Mobile application for hospital bed booking and making doctor appointments for emergency situations, allowing patients to access healthcare services on the go.",
-      technologies: ["React Native", "Redux", "Firebase", "Expo"],
+      technologies: ["React Native", "Redux", "Firebase", "NativeWind"],
       githubUrl: "https://github.com/Taher2512/Doklink-App",
       storeUrl: "",
       imageUrls: [
@@ -181,7 +189,7 @@ const ProjectsSection = () => {
       title: "DCS App",
       description:
         "A field service management application for maintenance technicians to track work orders and report on completed jobs.",
-      technologies: ["React Native", "Context API", "Node.js", "MongoDB"],
+      technologies: ["React Native", "Redux", "PHP", "MySQL"],
       githubUrl: "https://github.com/Taher2512/DCS-App",
       storeUrl: "",
       imageUrls: [
@@ -201,7 +209,7 @@ const ProjectsSection = () => {
       title: "SynapsisUI Mobile",
       description:
         "The mobile companion to SynapsisUI, providing native components for building cross-platform mobile applications.",
-      technologies: ["React Native", "TypeScript", "Expo", "Jest"],
+      technologies: ["React Native", "Reanimated", "Skia"],
       githubUrl: "",
       storeUrl: "",
       imageUrls: [
@@ -217,9 +225,9 @@ const ProjectsSection = () => {
     //   technologies: [
     //     "React Native",
     //     "Redux",
-    //     "Node.js",
-    //     "Firebase",
-    //     "Chart.js",
+    //     "Laravel",
+    //     "MySQL",
+    //     "NativeWind",
     //   ],
     //   githubUrl: "",
     //   storeUrl: "",
@@ -235,7 +243,14 @@ const ProjectsSection = () => {
       title: "DeDocs",
       description:
         "A decentralized document verification and storage solution with blockchain-based proof of existence.",
-      technologies: ["Flutter", "Dart", "Firebase", "Solidity"],
+      technologies: [
+        "React Native",
+        "Solana",
+        "Rust",
+        "Anchor",
+        "Firebase",
+        "NativeWind",
+      ],
       githubUrl: "https://github.com/Blaze5333/DeDocs",
       storeUrl: "",
       imageUrls: [
@@ -251,7 +266,7 @@ const ProjectsSection = () => {
       title: "HICF App",
       description:
         "An inventory management system app where users can manage their stock, track orders, and update inventory accordingly in real-time.",
-      technologies: ["React Native", "Redux Toolkit", "Node.js", "MongoDB"],
+      technologies: ["React Native", "Redux Toolkit", "PHP", "MySQL"],
       githubUrl: "",
       storeUrl: "",
       imageUrls: [
@@ -267,7 +282,14 @@ const ProjectsSection = () => {
       title: "Scrapify",
       description:
         "An application for recycling centers and users to manage and track recyclable materials with reward incentives.",
-      technologies: ["React Native", "Redux", "Firebase", "Maps API"],
+      technologies: [
+        "React Native",
+        "Redux",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "NativeWind",
+      ],
       githubUrl: "https://github.com/TaherMustafa-Solutions/h4b_frontend",
       storeUrl: "",
       imageUrls: [
@@ -287,7 +309,16 @@ const ProjectsSection = () => {
       title: "CarbonDEX Exchange",
       description:
         "A decentralized exchange specifically designed for trading carbon credits and environmental assets with real-time pricing.",
-      technologies: ["React", "Web3.js", "Solidity", "The Graph", "ChainLink"],
+      technologies: [
+        "Next.js",
+        "Web3.js",
+        "Ethereum",
+        "Solidity",
+        "IPFS",
+        "Base",
+        "Framer Motion",
+        "Tailwind CSS",
+      ],
       githubUrl: "https://github.com/Taher2512/CarbonDEX",
       liveUrl: "https://carbon-dex.vercel.app",
       imageUrls: [
@@ -305,7 +336,14 @@ const ProjectsSection = () => {
       title: "DigiVote DAO",
       description:
         "A decentralized autonomous organization platform for community governance with transparent voting and proposal systems.",
-      technologies: ["React", "Solidity", "The Graph", "IPFS", "Ethers.js"],
+      technologies: [
+        "Next.js",
+        "Ethers.js",
+        "Ethereum",
+        "Solidity",
+        "IPFS",
+        "Tailwind CSS",
+      ],
       githubUrl: "https://github.com/Taher2512/DigiVote",
       liveUrl: "",
       imageUrls: [
@@ -320,7 +358,7 @@ const ProjectsSection = () => {
       title: "Merit Mint",
       description:
         "A platform that rewards NFTs and tokens for people who perform well in academics and education in their institutions, incentivizing educational excellence.",
-      technologies: ["Solidity", "React", "Ethers.js", "IPFS", "Hardhat"],
+      technologies: ["Next.js", "Flow", "Ethers.js", "IPFS", "NFTs"],
       githubUrl: "https://github.com/Taher2512/MeritMint.",
       liveUrl: "",
       imageUrls: [

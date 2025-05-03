@@ -32,6 +32,10 @@ import {
   SiSass,
   SiPhp,
   SiMysql,
+  SiFramer,
+  SiExpo,
+  SiCoinbase,
+  SiWebflow,
 } from "react-icons/si";
 
 const ExpertiseSection = () => {
@@ -93,6 +97,7 @@ const ExpertiseSection = () => {
         { name: "TypeScript", icon: <SiTypescript /> },
         { name: "React.js", icon: <SiReact /> },
         { name: "Next.js", icon: <SiNextdotjs /> },
+        { name: "Framer Motion", icon: <SiFramer /> },
         { name: "Redux", icon: <SiRedux /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss /> },
         { name: "HTML5", icon: <SiHtml5 /> },
@@ -116,7 +121,11 @@ const ExpertiseSection = () => {
     {
       title: "Mobile Development",
       icon: <FiSmartphone />,
-      skills: [{ name: "React Native", icon: <SiReact /> }],
+      skills: [
+        { name: "React Native", icon: <SiReact /> },
+        { name: "Expo", icon: <SiExpo /> },
+        { name: "NativeWind", icon: <SiTailwindcss /> },
+      ],
     },
     {
       title: "Blockchain Development",
