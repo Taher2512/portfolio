@@ -55,7 +55,7 @@ const HeroSection = () => {
     },
   };
 
-  const sentence = "I build things for the web & mobile.";
+  const sentence = "I build things for the web, mobile & blockchain.";
 
   // Background blob animation
   const blobVariants = {
@@ -295,8 +295,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 1.5 }}
           >
             I&apos;m a full-stack developer specializing in building exceptional
-            digital experiences. With expertise in web, mobile, and blockchain
-            technologies, I craft powerful and user-friendly applications.
+            digital experiences. With expertise in web, mobile, and blockchain/Web3
+            technologies, I craft powerful, secure and user-friendly applications.
           </motion.p>
 
           <motion.div

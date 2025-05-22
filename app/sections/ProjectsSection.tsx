@@ -306,6 +306,40 @@ const ProjectsSection = () => {
 
   const web3Projects = [
     {
+      title: "Strike",
+      description:
+        "A revolutionary fantasy cricket platform built on Solana that lets players create teams, compete in transparent contests, and win instant payouts with near-zero fees. Using MagicBlock and ZK Compression, we've eliminated traditional fantasy sports pain points while adding dynamic player NFTs that update with real-world performances.",
+      technologies: [
+        "Next.js",
+        "Solana",
+        "Anchor",
+        "Rust",
+        "MagicBlock",
+        "ZK Compression",
+        "Supabase",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
+      githubUrl: "https://github.com/Tarif-dev/strike",
+      liveUrl: "https://strike-phi.vercel.app",
+      imageUrls: [
+        "/projects/strike/1.png",
+        "/projects/strike/2.png",
+        "/projects/strike/3.png",
+        "/projects/strike/4.png",
+        "/projects/strike/5.png",
+        "/projects/strike/6.png",
+        "/projects/strike/7.png",
+        "/projects/strike/8.png",
+        "/projects/strike/9.png",
+        "/projects/strike/10.png",
+        "/projects/strike/11.png",
+        "/projects/strike/12.png",
+        "/projects/strike/13.png",
+        "/projects/strike/14.png",
+      ],
+    },
+    {
       title: "CarbonDEX Exchange",
       description:
         "A decentralized exchange specifically designed for trading carbon credits and environmental assets with real-time pricing.",
