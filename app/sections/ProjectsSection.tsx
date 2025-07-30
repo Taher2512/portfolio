@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ProjectCard from "../components/ProjectCard";
 import MobileProjectCard from "../components/MobileProjectCard";
-// import Link from "next/link";
 
 const ProjectsSection = () => {
   const [activeTab, setActiveTab] = useState("all");
@@ -218,27 +217,21 @@ const ProjectsSection = () => {
         "/projects/synapsisui-app/3.png",
       ],
     },
-    // {
-    //   title: "SuperSteel",
-    //   description:
-    //     "A manufacturing management system for steel production companies, tracking inventory, production, and sales.",
-    //   technologies: [
-    //     "React Native",
-    //     "Redux",
-    //     "Laravel",
-    //     "MySQL",
-    //     "NativeWind",
-    //   ],
-    //   githubUrl: "",
-    //   storeUrl: "",
-    //   imageUrls: [
-    //     "/projects/supersteel-app/1.png",
-    //     "/projects/supersteel-app/2.png",
-    //     "/projects/supersteel-app/3.png",
-    //     "/projects/supersteel-app/4.png",
-    //     "/projects/supersteel-app/5.png",
-    //   ],
-    // },
+    {
+      title: "SuperSteel",
+      description:
+        "A manufacturing management system for steel production companies, tracking inventory, production, and sales.",
+      technologies: ["React Native", "Redux", "Laravel", "MySQL", "NativeWind"],
+      githubUrl: "",
+      storeUrl: "",
+      imageUrls: [
+        "/projects/supersteel-app/1.png",
+        "/projects/supersteel-app/2.png",
+        "/projects/supersteel-app/3.png",
+        "/projects/supersteel-app/4.png",
+        "/projects/supersteel-app/5.png",
+      ],
+    },
     {
       title: "DeDocs",
       description:

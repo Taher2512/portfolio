@@ -119,21 +119,21 @@ const CarouselComponent = ({
         </div> */}
       </motion.div>
 
-      {/* Navigation arrows - hidden on mobile but visible on desktop hover */}
+      {/* Navigation arrows - more visible styling */}
       <button
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hidden md:block"
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full opacity-80 group-hover:opacity-100 transition-all duration-300 hidden md:block backdrop-blur-sm border border-white/20 shadow-lg hover:scale-110"
         onClick={goToPrevious}
         aria-label="Previous image"
       >
-        <FiChevronLeft size={18} />
+        <FiChevronLeft size={20} />
       </button>
 
       <button
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hidden md:block"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full opacity-80 group-hover:opacity-100 transition-all duration-300 hidden md:block backdrop-blur-sm border border-white/20 shadow-lg hover:scale-110"
         onClick={goToNext}
         aria-label="Next image"
       >
-        <FiChevronRight size={18} />
+        <FiChevronRight size={20} />
       </button>
 
       {/* Slide indicator dots */}
