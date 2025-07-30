@@ -34,7 +34,10 @@ import {
   SiMysql,
   SiFramer,
   SiExpo,
+  SiDocker,
+  SiKubernetes,
 } from "react-icons/si";
+import { FaAws, FaDigitalOcean } from "react-icons/fa6";
 
 const ExpertiseSection = () => {
   const [ref, inView] = useInView({
@@ -138,7 +141,13 @@ const ExpertiseSection = () => {
     {
       title: "DevOps & Tools",
       icon: <FiLayers />,
-      skills: [{ name: "Git", icon: <SiGit /> }],
+      skills: [
+        { name: "Git", icon: <SiGit /> },
+        { name: "Docker", icon: <SiDocker /> },
+        { name: "Kubernetes", icon: <SiKubernetes /> },
+        { name: "AWS", icon: <FaAws /> },
+        { name: "DigitalOcean", icon: <FaDigitalOcean /> },
+      ],
     },
   ];
 
